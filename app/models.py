@@ -34,8 +34,3 @@ class Role(db.Model):
 @loginmanager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
-
-# @app.route('/secret')
-# @login_required
-# def secret():
-#     return "Only authenticated users are allowed!"

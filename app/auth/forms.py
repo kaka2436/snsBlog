@@ -1,5 +1,5 @@
 from flask_bootstrap import Bootstrap
-from flask_wtf import Form
+from flask_wtf import FlaskForm as Form
 from wtforms import StringField,PasswordField,BooleanField,SubmitField
 from wtforms.validators import Required,Length,Email
 from flask_wtf import FlaskForm
@@ -10,13 +10,14 @@ from ..models import User
 
 class LoginForm(FlaskForm):
     email = StringField('Email',validators=[
-    Required(),Length(1,6),Email
+    Required(),Length(1,64),Email()
     ])
     password = PasswordField('password',validators=[
     Required()
     ])
     remember_me = BooleanField('Keep me log in')
     submit = SubmitField('Lon in')
+
 
 class RegistrationForm(Form):
     email = StringField('Email', validators=[Required(), Length(1, 64),Email()])
