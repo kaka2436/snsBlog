@@ -5,9 +5,9 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'WUzhao1990'
     SQLALCHEMY_COMMIT_ON_TEAEDOWN = True
-    FLASK_MAIL_SUBJECT_PREFIX = ['Flask']
-    FLASK_MAIL_SENDER = 'kaka2436@163.com'
-    FLASK_ADMIN = os.environ.get('FLASK_ADMIN')
+    FLASKY_MAIL_SUBJECT_PREFIX = ['Flask']
+    FLASKY_MAIL_SENDER = 'kaka2436@163.com'
+    FLASKY_ADMIN = os.environ.get('FLASK_ADMIN')
 
     @staticmethod
     def init_app(app):
