@@ -1,4 +1,4 @@
-#!/home/wujian/python/flask/snsblog/venv/bin/python
+#!/home/wujian/python/flask/snsBlog/venv/bin/python
 
 import sys
 import getopt

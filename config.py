@@ -5,7 +5,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'WUzhao1990'
     SQLALCHEMY_COMMIT_ON_TEAEDOWN = True
-    FLASKY_MAIL_SUBJECT_PREFIX = ['Flask']
+    FLASKY_MAIL_SUBJECT_PREFIX = 'Flask'
     FLASKY_MAIL_SENDER = 'kaka2436@163.com'
     FLASKY_ADMIN = os.environ.get('FLASK_ADMIN')
 
@@ -15,7 +15,7 @@ class Config:
 class DevelopmentConfig(Config):
     debug = True
     MAIL_SERVER = "smtp.163.com"
-    MAIL_PORT = 587
+    MAIL_PORT = 25
     MAIL_USE_TLS = True
     MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
     MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")

@@ -7,11 +7,17 @@
 <div class="page-header">
   <h1>Login</h1>
 </div>
+<div class="alert-warning">
+  {% for message in get_flashed_messages()%}
+    {{message}}
+  {% endfor %}
+</div>
 <div class="col-md-4">
   {{ wtf.quick_form(form) }}
+  <p>
+    <a href="{{ url_for('auth.register') }}">立即注册</a>
+    <a href="{{ url_for('auth.confirmEmail')}}">找回密码</a>
+  </p>
+
 </div>
-<p>
-  New user?
-  <a href="{{ url_for('auth.register') }}">Click here to register</a>
-</p>
 {% endblock %}
